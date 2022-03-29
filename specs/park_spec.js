@@ -52,24 +52,28 @@ describe('Park', function() {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     const actual = park.returnSpecies('t-rex');
-    assert.deepStrictEqual(actual, [dinosaur1])
+    assert.deepStrictEqual(actual, [dinosaur1]);
   });
 
   it('should be able to calculate the total number of visitors per day', function (){
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     const actual = park.totalVisitorsDaily();
-    assert.strictEqual(actual, 150)
+    assert.strictEqual(actual, 150);
   });
 
   it('should be able to calculate the total number of visitors per year', function (){
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     const actual = park.totalVisitorsAnnually();
-    assert.strictEqual(actual, 54750)
+    assert.strictEqual(actual, 54750);
   });
     
 
-  it('should be able to calculate total revenue for one year');
-
+  it('should be able to calculate total revenue for one year', function () {;
+  park.addDinosaur(dinosaur1);
+  park.addDinosaur(dinosaur2);
+  const actual = park.annualRevenue();
+  assert.strictEqual(actual, 191625)
+  });
 });
