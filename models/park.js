@@ -35,4 +35,12 @@ Park.prototype.returnSpecies = function (species) {
     return returnedSpecies
 }
 
+Park.prototype.getTotalVisitors = function () {
+    let totalVistors = 0;
+    for (var i = 0; i < this.dinosaurs.length; i++ ) {
+        totalVistors += this.dinosaurs[i].guestsAttractedPerDay;
+    }
+    return totalVistors
+}
+
 module.exports = Park;
