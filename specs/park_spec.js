@@ -46,10 +46,14 @@ describe('Park', function() {
     park.addDinosaur(dinosaur2);
     const actual = park.mostPopularDino();
     assert.strictEqual(actual, dinosaur2);
-
   });
 
-  it('should be able to find all dinosaurs of a particular species');
+  it('should be able to find all dinosaurs of a particular species', function () {
+    park.addDinosaur(dinosaur1);
+    park.addDinosaur(dinosaur2);
+    const actual = park.returnSpecies('t-rex');
+    assert.deepStrictEqual(actual, [dinosaur1])
+  });
 
   it('should be able to calculate the total number of visitors per day');
 
