@@ -58,7 +58,7 @@ Park.prototype.removeSpecies = function(species) {
     for (var i = 0; i < speciesToRemove.length; i++ ) {
         for (var x = 0; x < this.dinosaurs.length; x++ ) {
             if (speciesToRemove[i].species == this.dinosaurs[x].species)
-            this.dinosaurs.splice[x, 1]
+            this.dinosaurs.splice(x, 1)
         }
     }
 }
